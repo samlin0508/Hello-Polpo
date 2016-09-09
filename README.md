@@ -1,3 +1,2 @@
 # Hello-Polpo
-Spring MVC + Spring IoC + Spring JdbcTemplate
-AngularJS-ui-grid
+AngularJS-ui-grid + Spring MVC + Spring IoC + Spring JdbcTemplate(continue...)
