@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.polpolink.hellopolpo.service.IHelloPolpoService;
 
-@Controller
+@Controller()
 public class HelloPolpoController {
 	private IHelloPolpoService helloPolpoService;
 	
@@ -29,5 +29,10 @@ public class HelloPolpoController {
 	public String helloWithName(@PathVariable("name") String name, Map<String, Object> model) {
 		model.put("hello", helloPolpoService.hello(name));
 		return "hello";
+	}
+	
+	@RequestMapping(value = "/hello-ui-grid", method = RequestMethod.GET)
+	public String helloUiGrid() {
+		return "hello-ui-grid";
 	}
 }
