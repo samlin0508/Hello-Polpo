@@ -130,9 +130,9 @@ angular.module('HelloPolpo', ['ui.grid', 'ui.grid.edit', 'ui.grid.cellNav', 'ui.
 //            });
         },
         columnDefs: [
-          { name: 'Framework', filed: 'Framework', displayName: 'Library/Framework/Platform', enableSorting: true, enableCellEdit: true },
-          { name: 'Language', filed: 'Language', displayName: 'Language', enableSorting: true, enableCellEdit: true },
-          { name: 'Description', field: 'Description', displayName: 'Description', enableSorting: true, enableCellEdit: true }
+          { name: 'framework', filed: 'framework', displayName: 'Library/Framework/Platform', enableSorting: true, enableCellEdit: true },
+          { name: 'language', filed: 'language', displayName: 'Language', enableSorting: true, enableCellEdit: true },
+          { name: 'description', field: 'description', displayName: 'Description', enableSorting: true, enableCellEdit: true }
 //          { name: 'Carried', field: 'Carried()', displayName: 'Carried', type: 'boolean', enableCellEdit: false },
 //          { name: 'Carried', displayName: 'Carried', type: 'boolean', enableCellEdit: false, cellTemplate: '<input type="checkbox" ng-model="row.entity.ModelFcstQty > 0 ? true : false">' },
         ]
