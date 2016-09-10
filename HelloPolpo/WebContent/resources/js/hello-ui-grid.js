@@ -130,7 +130,7 @@ angular.module('HelloPolpo', ['ui.grid', 'ui.grid.edit', 'ui.grid.cellNav', 'ui.
 //            });
         },
         columnDefs: [
-          { name: 'Framework', filed: 'Framework', displayName: 'Library/Framework', enableSorting: true, enableCellEdit: true },
+          { name: 'Framework', filed: 'Framework', displayName: 'Library/Framework/Platform', enableSorting: true, enableCellEdit: true },
           { name: 'Language', filed: 'Language', displayName: 'Language', enableSorting: true, enableCellEdit: true },
           { name: 'Description', field: 'Description', displayName: 'Description', enableSorting: true, enableCellEdit: true }
 //          { name: 'Carried', field: 'Carried()', displayName: 'Carried', type: 'boolean', enableCellEdit: false },
