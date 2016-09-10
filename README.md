@@ -1,5 +1,5 @@
 # Hello-Polpo
-AngularJS-ui-grid + Spring MVC + Spring IoC + Spring JdbcTemplate(continue...)
+AngularJS-ui-grid + Spring MVC + Spring IoC + Spring JdbcDaoSupport + MariaDB 10.1
 # Run examples 1
 Context-Root/hello
 # Run examples 2
