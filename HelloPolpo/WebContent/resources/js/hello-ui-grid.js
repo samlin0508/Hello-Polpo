@@ -74,8 +74,8 @@ angular.module('HelloPolpo', ['ui.grid', 'ui.grid.edit', 'ui.grid.cellNav', 'ui.
 //            gridApi.core.on.rowsRendered($scope, function () {
 //                if (!$scope.loadedUserSettings) {
 //                    $scope.loadedUserSettings = true;
-//                    if (userSettings && userSettings.GlobalSKU_CarryModelGrid) {
-//                        $scope.gridApi.saveState.restore($scope, userSettings.GlobalSKU_CarryModelGrid);
+//                    if (userSettings && userSettings.key) {
+//                        $scope.gridApi.saveState.restore($scope, userSettings.key);
 //                        $scope.gridApi.core.notifyDataChange(uiGridConstants.dataChange.ALL);
 //                    }
 //                    $scope.gridState = JSON.stringify(gridApi.saveState.save());
@@ -85,7 +85,7 @@ angular.module('HelloPolpo', ['ui.grid', 'ui.grid.edit', 'ui.grid.cellNav', 'ui.
 //                            if (gridState != $scope.gridState) {
 //                                //console.log('old:' + _$scope.gridState);
 //                                //console.log('new:' + gridState);
-//                                saveUserSettings($scope, 'GlobalSKU_CarryModelGrid', gridState, function (_$scope, data) {
+//                                saveUserSettings($scope, 'key', gridState, function (_$scope, data) {
 //                                    //console.log('SaveUserSettings:' + JSON.stringify(data));
 //                                    _$scope.gridState = gridState;
 //                                    userSettingsWatcher();
@@ -132,7 +132,7 @@ angular.module('HelloPolpo', ['ui.grid', 'ui.grid.edit', 'ui.grid.cellNav', 'ui.
         columnDefs: [
           { name: 'Framework', filed: 'Framework', displayName: 'Library/Framework', enableSorting: true, enableCellEdit: true },
           { name: 'Language', filed: 'Language', displayName: 'Language', enableSorting: true, enableCellEdit: true },
-          { name: 'Description', field: 'Description', displayName: 'Description', enableSorting: true, enableCellEdit: true },
+          { name: 'Description', field: 'Description', displayName: 'Description', enableSorting: true, enableCellEdit: true }
 //          { name: 'Carried', field: 'Carried()', displayName: 'Carried', type: 'boolean', enableCellEdit: false },
 //          { name: 'Carried', displayName: 'Carried', type: 'boolean', enableCellEdit: false, cellTemplate: '<input type="checkbox" ng-model="row.entity.ModelFcstQty > 0 ? true : false">' },
         ]
