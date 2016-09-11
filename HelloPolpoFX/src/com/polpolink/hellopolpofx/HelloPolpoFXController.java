@@ -5,6 +5,7 @@ import javax.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.stereotype.Component;
 
 import com.polpolink.hellopolpo.service.HelloPolpoService;
 import com.polpolink.hellopolpo.service.IHelloPolpoService;
@@ -13,7 +14,9 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
+@Component
 public class HelloPolpoFXController {
+	@Autowired
 	private IHelloPolpoService helloPolpoService;
 	@FXML
 	private TextField name;
@@ -21,8 +24,8 @@ public class HelloPolpoFXController {
 	private Label message;
 	
 	public HelloPolpoFXController() {
-		ApplicationContext context = new ClassPathXmlApplicationContext("spring-core-config.xml");
-		this.helloPolpoService = (IHelloPolpoService)context.getBean("helloPolpoService");
+		//ApplicationContext context = new ClassPathXmlApplicationContext("spring-core-config.xml");
+		//this.helloPolpoService = (IHelloPolpoService)context.getBean("helloPolpoService");
 	}
 	
 	@FXML
