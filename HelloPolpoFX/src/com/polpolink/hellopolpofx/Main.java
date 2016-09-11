@@ -1,5 +1,8 @@
 package com.polpolink.hellopolpofx;
 	
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
 import javafx.application.Application;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
