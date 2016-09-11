@@ -1,0 +1,16 @@
+.root {
+	-fx-padding:5;
+}
+
+.flow {
+	-fx-hgap:5;
+}
+
+#message {
+	-fx-font-size:20px;
+	-fx-font-weight:bold;
+	-fx-fill: linear-gradient(from 0% 0% to 100% 200%, repeat, aqua 0%, red 50%);
+	-fx-stroke: black;
+    -fx-stroke-width: 5;
+    -fx-text-fill:green;
+}
