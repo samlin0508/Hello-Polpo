@@ -1,13 +1,8 @@
-package com.polpolink.hellopolpofx;
-
-import javax.annotation.PostConstruct;
+package com.polpolink.hellopolpofx.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.stereotype.Component;
 
-import com.polpolink.hellopolpo.service.HelloPolpoService;
 import com.polpolink.hellopolpo.service.IHelloPolpoService;
 
 import javafx.fxml.FXML;
@@ -15,7 +10,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
 @Component
-public class HelloPolpoFXController {
+public class HelloController {
 	@Autowired
 	private IHelloPolpoService helloPolpoService;
 	@FXML
@@ -23,7 +18,7 @@ public class HelloPolpoFXController {
 	@FXML
 	private Label message;
 	
-	public HelloPolpoFXController() {
+	public HelloController() {
 		//ApplicationContext context = new ClassPathXmlApplicationContext("spring-core-config.xml");
 		//this.helloPolpoService = (IHelloPolpoService)context.getBean("helloPolpoService");
 	}

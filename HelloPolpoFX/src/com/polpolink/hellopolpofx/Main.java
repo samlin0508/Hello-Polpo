@@ -19,7 +19,7 @@ public class Main extends Application {
 		try {
 			//VBox root = (VBox)FXMLLoader.load(getClass().getResource("HelloPolpoFX.fxml"));
 			VBox root = (VBox)loader.load("HelloPolpoFX.fxml");
-			Scene scene = new Scene(root,250,60);
+			Scene scene = new Scene(root,250,250);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			primaryStage.setScene(scene);
 			primaryStage.show();

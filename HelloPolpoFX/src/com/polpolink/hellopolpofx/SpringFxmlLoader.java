@@ -13,7 +13,7 @@ public class SpringFxmlLoader {
 	private static final ApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring-core-config.xml");
 	
 	public Object load(String url) {
-		try (InputStream fxmlStream = SpringFxmlLoader.class.getResourceAsStream(url)) {
+		try (InputStream fxmlStream = SpringFxmlLoader.class.getResourceAsStream(applicationContext.getBean("fxmlPath") + url)) {
 			FXMLLoader loader = new FXMLLoader();
 			loader.setControllerFactory(new Callback<Class<?>, Object>() {
 				@Override

@@ -2,6 +2,10 @@
 	-fx-padding:5;
 }
 
+#rootVBox {
+	-fx-padding:5;
+}
+
 .flow {
 	-fx-hgap:5;
 }
