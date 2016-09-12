@@ -12,7 +12,7 @@
 		<children>
 			<ProgressBar fx:id="progressBar" progress="0"></ProgressBar>
 			<Label fx:id="message"></Label>
-			<Button fx:id="hello" onAction="#runProgress">run</Button>			
+			<Button fx:id="runProgress" onAction="#runProgress">run</Button>			
 		</children>
 	</FlowPane>
 </VBox>

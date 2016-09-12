@@ -1,12 +1,17 @@
 package com.polpolink.hellopolpofx.controller;
 
+import java.util.Map;
+import java.util.TreeMap;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import com.polpolink.hellopolpo.service.IHelloPolpoService;
 
+import javafx.beans.value.ObservableValue;
 import javafx.concurrent.Task;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ProgressBar;
 import javafx.scene.control.TextField;
@@ -17,6 +22,8 @@ public class ThreadingController {
 	private ProgressBar progressBar;
 	@FXML
 	private Label message;
+	@FXML
+	private Button runProgress;
 	
 	public ThreadingController() {
 	}
@@ -27,16 +34,19 @@ public class ThreadingController {
 	
 	@FXML
 	private void runProgress() {
-		Task task = new Task<Void>() {
+		Task<Void> task = new Task<Void>() {
 		    @Override public Void call() {
 		        final int max = 10000000;
+		        runProgress.setDisable(true);
 		        for (int i=1; i<=max; i++) {
 		            if (isCancelled()) {
 		               break;
 		            }
 		            updateProgress(i, max);
 		            updateMessage(Math.round((i/(float)max) * 100) + "%");
-		            //updateValue(null);
+		            if(i == max) {
+		            	runProgress.setDisable(false);
+		            }
 		        }
 				return null;
 		    }
