@@ -34,23 +34,22 @@ public class ThreadingController {
 	
 	@FXML
 	private void runProgress() {
-		Task<Void> task = new Task<Void>() {
-		    @Override public Void call() {
+		Task<String> task = new Task<String>() {
+		    @Override public String call() {
 		        final int max = 10000000;
-		        runProgress.setDisable(true);
 		        for (int i=1; i<=max; i++) {
 		            if (isCancelled()) {
 		               break;
 		            }
 		            updateProgress(i, max);
 		            updateMessage(Math.round((i/(float)max) * 100) + "%");
-		            if(i == max) {
-		            	runProgress.setDisable(false);
-		            }
+		            updateValue(String.valueOf(i));
 		        }
-				return null;
+				return "run";
 		    }
 		};
+		this.runProgress.disableProperty().bind(task.runningProperty());
+		this.runProgress.textProperty().bind(task.valueProperty());
 		this.progressBar.progressProperty().bind(task.progressProperty());
 		this.message.textProperty().bind(task.messageProperty());
 		new Thread(task).start();
