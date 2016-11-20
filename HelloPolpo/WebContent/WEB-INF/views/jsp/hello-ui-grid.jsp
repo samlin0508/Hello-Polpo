@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html ng-app="HelloPolpo">
 <head>
+<base href="<%= String.format("%s://%s:%s%s/", request.getScheme(), request.getServerName(), request.getServerPort(), request.getContextPath())%>">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link href="resources/webjars/ui-grid/3.2.5/ui-grid.min.css" rel="stylesheet" type="text/css" />
 <style>
