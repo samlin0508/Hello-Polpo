@@ -33,7 +33,7 @@ Context-Root/hello-ui-grid
 1. Install NodeJS
 2. Using NodeJS to install Cordova
 3. Install Android SDK & system image
-4. Set up VT
+4. Set up VT(Virtualization Technology option in BIOS)
 5. Create an AVD
 6. Install THyM
 7. Set environment path for Android SDK
