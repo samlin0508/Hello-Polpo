@@ -29,3 +29,12 @@ Context-Root/hello
 Context-Root/hello/someone
 ### Run examples 3
 Context-Root/hello-ui-grid
+# Using THyM to create HelloCordova
+1. Install NodeJS
+2. Using NodeJS to install Cordova
+3. Install Android SDK & system image
+4. Set up VT
+5. Create an AVD
+6. Install THyM
+7. Set environment path for Android SDK
+8. Finish
